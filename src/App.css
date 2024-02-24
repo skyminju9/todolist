@@ -11,14 +11,14 @@ body {
 
 @media (min-width: 400px) {
   .App {
-    width: 390px;
-    height: 860px;
+    width: 393px;
+    height: 772px;
   }
 }
 
 @media (max-width: 400px) {
   .App {
-    width: 90vh;
+    width: 90vw;
     height: auto;
   }
 }
@@ -28,29 +28,37 @@ body {
   box-shadow: rgba(100, 100, 11, 0.2) 0px 7px 29px 0px;
 }
 
-/* Main Screen */
+/* MainPage */
 
-.mainpage_container{
+.MainPage{
   font-family: "Inter", sans-serif;
   align-items: center;
+  width: 100%;
+  height: 100%;
 
 }
 
-.mainpage_logo{
+.MainPage .mainpage_logo{
   margin-top: 80px;
   margin-left: 20px;
+  margin-bottom: 0px;
   justify-content: flex-start;
 }
 
-.mainpage_title h4{
+.MainPage .mainpage_title{
+  
+}
+
+.MainPage .mainpage_title h4{
   margin-left: 32px;
+  margin-bottom: 0px;
+  margin-top:24px;
   line-height: 40px;
   font-weight: 600;
   font-size: 30px;
-  margin-bottom: 0px;
 }
 
-.mainpage_description{
+.MainPage .mainpage_description p{
   margin-left: 32px;
   line-height: 40px;
   font-size: 18px;
@@ -59,9 +67,14 @@ body {
   font-weight: 300;
 }
 
-.mainpage_signin_button{
+.MainPage .mainpage_signin_button{
+  /* display:flex; */
   position:relative;
-  margin-bottom: 60px;
+  align-items: center;
+  margin-left: 36px;
+  margin-right: 36px;
+  margin-top:363px;
+  
 }
 
 /* MyButton */
@@ -81,4 +94,19 @@ body {
   padding-right: 120px;
   padding-top:10px;
   padding-bottom: 10px;
+}
+
+/* SignIn */
+.SignIn .signin_logo{
+  margin-top:80px;
+  margin-left:20px;
+  margin-bottom: 0px;
+}
+
+.SignIn .signin_title h4{
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+  margin-left: 27px;
+  margin-top: 8px;
 }
