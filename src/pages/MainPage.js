@@ -1,11 +1,17 @@
 import React from "react";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {ReactComponent as Logo} from "../logo.svg";
 import MyButton from "../components/MyButton";
 
 const MainPage = () => {
+    const navigate = useNavigate();
+
+    const handleSignInButton = () => {
+        navigate('/signin');
+    }
+
     return(
-        <div className="mainpage_container">
+        <div className="MainPage">
             <div className="mainpage_logo">
                 <Logo/>
             </div>
@@ -19,12 +25,12 @@ const MainPage = () => {
                     
             </div>
             <div className="mainpage_description">
-                
-                make your schedule better
-                
+                <p>
+                    make your schedule better
+                </p>
             </div>
             <div className="mainpage_signin_button">
-                <MyButton text={"SIGN IN"}/>
+                <MyButton text={"SIGN IN"} onClick={handleSignInButton}/>
             </div>
         </div>
     )
