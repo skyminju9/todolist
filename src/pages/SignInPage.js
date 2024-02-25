@@ -4,7 +4,7 @@ import MyInput from "../components/MyInput";
 import {ReactComponent as SmallLogo} from '../small_logo.svg';
 import { useNavigate } from "react-router-dom";
 
-const SignIn = () => {
+const SignInPage = () => {
 
     const navigate = useNavigate();
 
@@ -25,13 +25,13 @@ const SignIn = () => {
                     EVERYDAY <br/>
                 </h4>
             </div>
-            <div className="signin_input_email">
-                <p>EMAIL ADDRESS</p>
-                <MyInput type={"id"} text={"userid@email.com"}/>
-            </div>
-            <div className="signin_input_password">
-                <p>PASSWORD</p>
-                <MyInput type={"password"} text={"password"}/>
+            <div className="signin_info">
+                <div className="signin_input_email">
+                    <MyInput title={"EMAIL ADDRESS"} type={"id"} text={"userid@email.com"}/>
+                </div>
+                <div className="signin_input_password">
+                    <MyInput title={"PASSWORD"} type={"password"} text={"password"}/>
+                </div>
             </div>
             <div className="signup_container">
                 <div className="signup_text">
@@ -48,4 +48,4 @@ const SignIn = () => {
     )
 }
 
-export default SignIn;
+export default SignInPage;
