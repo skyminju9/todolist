@@ -1,6 +1,9 @@
-const MyInput = ({type, text}) => {
+const MyInput = ({title, type, text}) => {
     return(
-        <input type={type} placeholder={text}/>
+        <div className="input_box_component">
+            <p>{title}</p>
+            <input type={type} placeholder={text}/>
+        </div>
     )
 }
 
