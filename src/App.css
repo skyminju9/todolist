@@ -106,32 +106,23 @@ body {
 .SignIn .signin_title h4{
   font-size: 18px;
   line-height: 20px;
-  font-weight: 600;
+  font-weight: 500;
   margin-left: 27px;
   margin-top: 8px;
 }
 
-.SignIn .signin_input_email{
-  padding-left: 46px;
-  padding-right: 47px;
-  margin-top:113px;
+.SignIn .signin_info{
+  margin-top: 99px;
+  margin-left:46px;
+  margin-right:47px;
+  margin-bottom: 0px;
+
+}
+
+.SignIn .signin_info .signin_input_password input{
   margin-bottom: 0px;
 }
 
-.SignIn .signin_input_password{
-  padding-left: 46px;
-  padding-right: 47px;
-  margin-top:40px;
-  margin-bottom: 0px;
-}
-
-.SignIn .signin_input_email, .signin_input_password p{
-  font-size: 12px;
-  font-weight: bold;
-  color: #666666;
-  line-height: 20px;
-  margin-bottom: 8px;
-}
 
 .SignIn .signup_container{
   display: flex;
@@ -142,6 +133,7 @@ body {
   margin-left: 46px;
   margin-right: 47px;
   margin-top: 12px;
+  
 }
 
 .SignIn .signup_container .signup_text{
@@ -160,19 +152,65 @@ body {
 }
 
 .SignIn .signin_button{
+  margin-top:93px;
   margin-left: 37px;
   margin-right: 36px;
 }
 
 /* MyInput */
 
-input{
+.input_box_component input{
   font-size: 16px;
   background-color: #FFEEEE;
   padding-left: 24px;
-  padding-right: 64px;
+  padding-right: 74px;
   padding-top:20px;
   padding-bottom: 20px;
   border:none;
   border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.input_box_component p{
+  font-size: 12px;
+  font-weight: bold;
+  color: #666666;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.input_box_component input::placeholder{
+  color: #888888;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* SignUp */
+
+.SignUp .signup_logo{
+  margin-top:80px;
+  margin-left:20px;
+  margin-bottom: 0px;
+}
+
+.SignUp .signup_title h4{
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+  margin-left: 27px;
+  margin-top: 8px;
+}
+
+.SignUp .signup_info{
+  margin-top: 59px;
+  margin-left: 47px;
+  margin-right: 46px;
+  margin-bottom: 0px;
+  
+}
+
+.SignUp .signup_button{
+  margin-top:97px;
+  margin-left: 37px;
+  margin-right: 36px;
 }
