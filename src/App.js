@@ -1,9 +1,10 @@
-import './App.css';
+import "./App.css";
+import SearchPage from "./pages/SearchPage";
 
 function App() {
   return (
     <div className="App">
-      TODOLIST APP
+      <SearchPage />
     </div>
   );
 }
