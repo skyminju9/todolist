@@ -1,52 +1,73 @@
 import React, { useState, useEffect } from "react";
 
-const TagInput = () => {
-  const [tags, setTags] = useState([]);
-  const [input, setInput] = useState("");
+const TagInput = ({ tags, setTags }) => {
+  const [inputTag, setInputTag] = useState("");
+  const [tagHistory, setTagHistory] = useState([]);
 
-  // 컴포넌트가 마운트될 때 로컬 스토리지에서 태그를 로드합니다.
+  // 컴포넌트 마운트 시 로컬 스토리지에서 태그 히스토리 로드
   useEffect(() => {
-    const loadedTags = JSON.parse(localStorage.getItem("tags")) || [];
-    setTags(loadedTags);
+    const loadedHistory = JSON.parse(localStorage.getItem("tagHistory")) || [];
+    setTagHistory(loadedHistory);
   }, []);
 
-  // 태그를 로컬 스토리지에 저장하는 함수
-  const saveTags = (newTags) => {
-    localStorage.setItem("tags", JSON.stringify(newTags));
+  const handleAddTag = () => {
+    if (!inputTag.trim()) return;
+
+    if (!tags.includes(inputTag)) {
+      setTags((prevTags) => [...prevTags, inputTag]);
+    }
+
+    // 태그 히스토리 업데이트 (중복 제거 및 최근 5개 유지)
+    const updatedHistory = [...new Set([inputTag, ...tagHistory])].slice(0, 5);
+    setTagHistory(updatedHistory);
+
+    setInputTag("");
   };
 
-  const addTag = (tag) => {
-    const newTags = [...tags, tag].slice(-5); // 최근 5개 태그만 유지
-    setTags(newTags);
-    saveTags(newTags);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!input.trim()) return; // 입력값이 없으면 추가하지 않음
-    addTag(input.trim());
-    setInput(""); // 입력 필드 초기화
+  // 태그 히스토리가 변경될 때마다 로컬 스토리지에 저장
+  useEffect(() => {
+    // tagHistory가 비어 있지 않은 경우에만 로컬 스토리지에 저장
+    if (tagHistory.length > 0) {
+      localStorage.setItem("tagHistory", JSON.stringify(tagHistory));
+    }
+  }, [tagHistory]);
+  const handleSelectTag = (selectedTag) => {
+    setInputTag(selectedTag);
   };
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="태그 추가..."
-        />
-        <button type="submit">추가</button>
-      </form>
-      <ul>
-        {tags.map((tag, index) => (
-          <li key={index}>
-            <i className="fas fa-tag"></i>
-            {tag}
-          </li>
-        ))}
-      </ul>
+      <input
+        type="text"
+        value={inputTag}
+        onChange={(e) => setInputTag(e.target.value)}
+        placeholder="태그를 입력하세요"
+      />
+      <button type="button" onClick={handleAddTag}>
+        태그 추가
+      </button>
+      <div>
+        <h4>현재 태그:</h4>
+        <ul>
+          {tags.map((tag, index) => (
+            <li key={index}>{tag}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h4>최근 태그:</h4>
+        <ul>
+          {tagHistory.map((tag, index) => (
+            <li
+              key={index}
+              onClick={() => handleSelectTag(tag)}
+              style={{ cursor: "pointer" }}
+            >
+              {tag}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
