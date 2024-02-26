@@ -1,10 +1,15 @@
+import Detail from './Detail';
 import './App.css';
 
+
 function App() {
+ 
   return (
     <div className="App">
-      TODOLIST APP
+      
+      <Detail />
     </div>
+    
   );
 }
 

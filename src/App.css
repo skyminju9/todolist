@@ -1,3 +1,63 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+@media (min-width: 400px) {
+  .App {
+    width: 390px;
+    height: 860px;
+  }
+}
+
+@media (max-width: 400px) {
+  .App {
+    width: 90vh;
+    height: auto;
+  }
+}
+
+#root {
+  background-color: white;
+  box-shadow: rgba(100, 100, 11, 0.2) 0px 7px 29px 0px;
+}
+
+
+.TodoDetail {
+  padding: 30px;
+}
+
+.TodoDetail .todo_date_wrapper{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.TodoDetail .todo_date_wrapper .todo_year{
+  font-size: 18px;
   text-align: center;
 }
+
+.TodoDetail .detail_button{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.TodoDetail .todo .todo-info{
+  border-bottom:1px solid #e2e2e2;
+}
+.TodoDetail .todo-memo{
+  font-size: 20;
+  font-weight: bold;
+}
+
