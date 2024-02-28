@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import RatingStars from "../Component/RatingStars";
 import TagInput from "../Component/TagInput";
 import "../New.css";
+
 const New = () => {
   const [day, setDay] = useState("");
   const [title, setTitle] = useState("");
@@ -36,7 +37,6 @@ const New = () => {
   return (
     <div className="New">
       <form onSubmit={handleSubmit}>
-        <header>Todo list 작성</header>
         <section className="Date">
           <input
             type="datetime-local"
@@ -61,7 +61,7 @@ const New = () => {
           {/* RatingStars 컴포넌트를 사용합니다. */}
         </section>
         <section className="Category">
-          <label htmlFor="category">할일 유형</label>
+          <h4>할 일 유형</h4>
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
@@ -78,17 +78,15 @@ const New = () => {
             태그
             <i className="fas fa-tag"></i>
           </h4>
-          <TagInput tags={tags} setTags={setTags} />{" "}
-          {/* TagInput 컴포넌트 사용 */}
+          <TagInput tags={tags} setTags={setTags} />
         </section>
         <section className="Memo">
           <h4>메모</h4>
           <input
             type="text"
             value={memo}
+            className="memo"
             onChange={(e) => setMemo(e.target.value)}
-            placeholder="메모를 입력하세요"
-            name="memo"
           />
         </section>
         <section className="Submit">
