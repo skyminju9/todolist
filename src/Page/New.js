@@ -108,11 +108,6 @@ const New = () => {
             onChange={(e) => setMemo(e.target.value)}
           />
         </section>
-        <section>
-          <button className="Submit" type="submit">
-            제출하기
-          </button>
-        </section>
       </form>
     </div>
   );
