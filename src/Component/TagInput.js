@@ -41,16 +41,13 @@ const TagInput = ({ tags, setTags }) => {
   };
   const TagItem = ({ tag, handleSelectTag }) => {
     return (
-      <li
-        onClick={() => handleSelectTag(tag)}
-        className="list-item"
-        style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
-      >
+      <div className="list-item" onClick={() => handleSelectTag(tag)}>
         <LabelOutlinedIcon
-          style={{ transform: "rotate(180deg)", marginRight: "8px" }}
+          className="list-item-icon"
+          style={{ fontSize: 60 }}
         />
-        {tag}
-      </li>
+        <span className="list-item-text">{tag}</span>
+      </div>
     );
   };
 
@@ -60,8 +57,9 @@ const TagInput = ({ tags, setTags }) => {
         type="text"
         value={inputTag}
         onChange={(e) => setInputTag(e.target.value)}
-        onKeyDown={handleKeyDown} // 키 다운 이벤트에 함수 연결
-        placeholder="태그를 입력하세요"
+        onKeyDown={handleKeyDown}
+        placeholder="태그를 입력하세요(최대 2글자)"
+        maxLength="2" // 최대 입력 가능한 문자 수를 2로 설정
       />
       {/* 현재 태그 리스트를 표시하는 부분 제거 */}
       <div>

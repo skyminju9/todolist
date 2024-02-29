@@ -1,49 +1,68 @@
 import React, { useState } from "react";
+import DatePicker, { registerLocale } from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import ko from "date-fns/locale/ko"; // 한국어 로케일 임포트
 import RatingStars from "../Component/RatingStars";
 import TagInput from "../Component/TagInput";
 import "../New.css";
+registerLocale("ko", ko); // 한국어 로케일 등록
 
 const New = () => {
-  const [day, setDay] = useState("");
+  const [startDate, setStartDate] = useState(new Date());
   const [title, setTitle] = useState("");
-  const [category, setCategory] = useState("Once"); // 초기값 'Once'
+  const [category, setCategory] = useState("Once");
   const [memo, setMemo] = useState("");
-  const [rating, setRating] = useState(0); // 초기값 0
-  const [tags, setTags] = useState([]); // 초기값 빈 배열
+  const [rating, setRating] = useState(0);
+  const [tags, setTags] = useState([]);
+  const [submittedData, setSubmittedData] = useState(null); // 제출된 데이터를 저장할 상태
 
-  // 폼 제출 핸들러
   const handleSubmit = (event) => {
-    event.preventDefault(); // 폼의 기본 제출 동작 방지
+    event.preventDefault();
 
-    // 여기서 사용자 입력 데이터 처리 (예: 콘솔에 출력)
-    console.log({
-      day,
+    const data = {
+      day: startDate,
       title,
       rating,
       category,
       tags,
       memo,
-    });
+    };
+
+    console.log(data);
+
+    // 제출된 데이터를 상태에 저장
+    setSubmittedData(data);
 
     // 필드 초기화
-    setDay("");
+    setStartDate(new Date());
     setTitle("");
     setRating(0);
     setCategory("Once");
     setTags([]);
     setMemo("");
+    console.log(submittedData);
   };
-
+  const handleCancel = () => {
+    // 취소 로직, 필요에 따라 구현
+  };
   return (
     <div className="New">
-      <form onSubmit={handleSubmit}>
+      <div className="Header">
+        <button onClick={handleCancel}>취소</button>
+        <button onClick={handleSubmit}>완료</button>
+      </div>
+      <form onSubmit={(e) => e.preventDefault()}>
         <section className="Date">
-          <input
-            type="datetime-local"
-            value={day}
-            onChange={(e) => setDay(e.target.value)}
-            name="day"
-          />{" "}
+          <DatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            locale="ko" // 한국어 로케일 사용
+            showTimeSelect
+            timeFormat="HH:mm"
+            timeIntervals={1} // 시간 선택 간격을 1분으로 설정
+            timeCaption="시간"
+            dateFormat="MMMM d, yyyy h:mm aa" // 날짜와 시간 형식을 설정
+          />
         </section>
         <section className="Title">
           <h4>할일</h4>
@@ -89,8 +108,10 @@ const New = () => {
             onChange={(e) => setMemo(e.target.value)}
           />
         </section>
-        <section className="Submit">
-          <button type="submit">제출하기</button>
+        <section>
+          <button className="Submit" type="submit">
+            제출하기
+          </button>
         </section>
       </form>
     </div>

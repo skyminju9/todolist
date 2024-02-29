@@ -15,7 +15,6 @@ h4 {
   left: 0;
   right: 0;
   margin: auto; /* 가로 중앙 정렬 */
-  width: 50%; /* 또는 실제 너비 */
   width: 393px;
   display: grid;
   justify-items: center;
@@ -41,6 +40,26 @@ section::after {
   margin-left: auto;
   margin-right: auto;
 }
+.Header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0; /* 상하 패딩만 적용하고 좌우 패딩은 제거 */
+  width: 100%; /* 컨테이너의 너비를 100%로 설정 */
+}
+
+.Header button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+  margin: 0; /* 버튼의 마진 제거 */
+}
+
+.Header button:hover {
+  background-color: #f0f0f0;
+}
+
 .Date input {
   font-family: "Inter", sans-serif;
   font-size: 20px;
@@ -93,14 +112,38 @@ section::after {
   margin: 0; /* 기본 마진 제거 */
   align-items: center; /* 세로 방향 중앙 정렬 */
 }
+.list-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
 
+.list-item-icon {
+  font-size: 2rem; /* 아이콘 크기 조정 */
+}
+
+.list-item-text {
+  position: absolute;
+  color: black; /* 텍스트 색상 */
+  font-size: 0.75rem; /* 텍스트 크기 */
+  pointer-events: none; /* 텍스트 클릭 방지 */
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
   transform: rotate(180deg); /* 아이콘을 180도 회전 */
 }
 
-.list-item {
-  display: flex; /* Flexbox를 사용하여 아이콘과 텍스트를 가로로 정렬 */
-  align-items: center; /* 세로 축 중앙 정렬 */
-  cursor: pointer;
+.react-datepicker {
+  font-family: "Inter", sans-serif; /* 글씨체 설정 */
+  font-size: 17px; /* 글씨 크기 설정 */
+}
+.react-datepicker__day--selected {
+  border-radius: 50%;
+  background-color: #216ba5;
+  color: white;
 }
