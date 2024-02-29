@@ -1,8 +1,8 @@
-const MyInput = ({title, type, text}) => {
+const MyInput = ({title, type, text, onChange}) => {
     return(
         <div className="input_box_component">
             <p>{title}</p>
-            <input type={type} placeholder={text}/>
+            <input type={type} placeholder={text} onChange={onChange}/>
         </div>
     )
 }
