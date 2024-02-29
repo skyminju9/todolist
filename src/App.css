@@ -29,35 +29,80 @@ body {
   box-shadow: rgba(100, 100, 11, 0.2) 0px 7px 29px 0px;
 }
 
-
 .TodoDetail {
   padding: 30px;
 }
 
-.TodoDetail .todo_date_wrapper{
+.todo_date_wrapper{
   font-size: 20px;
   font-weight: bold;
   text-align: center;
   padding-bottom: 15px;
   border-bottom: 1px solid #e2e2e2;
-}
-.TodoDetail .todo_date_wrapper .todo_year{
-  font-size: 18px;
-  text-align: center;
+ 
 }
 
+.todo_year{
+  font-size: 18px;
+}
+
+/* button */
+
+.close{
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+}
 .TodoDetail .detail_button{
   padding-top: 15px;
   padding-bottom: 15px;
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: space-between; 
 }
-.TodoDetail .todo .todo-info{
-  border-bottom:1px solid #e2e2e2;
+
+.btn_edit{
+  border: none;
+  color: blue;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
 }
-.TodoDetail .todo-memo{
-  font-size: 20;
+
+.btn_delete{
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.memo-title{
+  font-size: 20px;
   font-weight: bold;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e2e2e2;
+}
+
+.memo-wrapper .detail-memo{
+  font-size: 18px;
+}
+.TodoDetail .todo .summary{
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.todo{
+  padding-bottom: 20px;
+}
+
+/* ShowStar*/
+
+.fa-star {
+  padding: 0.2em; 
+  color: gray;
 }
 
