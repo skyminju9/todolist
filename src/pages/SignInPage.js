@@ -27,6 +27,8 @@ const SignInPage = ({onSignIn}) => {
             }else{
                 alert('아이디 또는 비밀번호가 올바르지 않습니다.');
             }
+        }else{
+            alert('이메일과 비밀번호를 입력하세요.');
         }
     }
 

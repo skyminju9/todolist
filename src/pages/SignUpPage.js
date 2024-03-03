@@ -17,13 +17,22 @@ const SignUpPage = () => {
             alert('모든 항목을 입력하세요.');
             return;
         }
-        if(password === checkPw){
-            const user = {email, password};
-            localStorage.setItem(JSON.stringify(email), JSON.stringify(user));
-            alert('회원가입 성공! 로그인 화면으로 이동합니다.');
-            navigate('/signin');
+        if(email.length < 14 || password.length < 8){
+            alert('이메일은 15자 이상, 비밀번호는 5자 이상 입력하세요.');
+            return;
+        }
+        if(!localStorage.getItem(JSON.stringify(email))){
+            if(password === checkPw){
+                const user = {email, password};
+                localStorage.setItem(JSON.stringify(email), JSON.stringify(user));
+                alert('회원가입 성공! 로그인 화면으로 이동합니다.');
+                navigate('/signin');
+            }else{
+                alert('비밀번호를 다시 확인해주세요.');
+                return;
+            }           
         }else{
-            alert('비밀번호를 다시 확인해주세요.');
+            alert('이미 존재하는 이메일입니다.')
             return;
         }
     }
