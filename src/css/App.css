@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url(./reset.css);
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  margin: 0;
+}
+
+@media (min-width: 400px) {
+  .App {
+    width: 390px;
+    height: 860px;
+  }
+}
+
+@media (max-width: 400px) {
+  .App {
+    width: 90vh;
+    height: auto;
+  }
+}
+
+#root {
+  background-color: white;
+  box-shadow: rgba(100, 100, 11, 0.2) 0px 7px 29px 0px;
+  font-family: "Inter", sans-serif;
+}
+
+/* .App {
+} */

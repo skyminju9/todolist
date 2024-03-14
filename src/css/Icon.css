@@ -1,0 +1,13 @@
+/* ICON */
+.Icon {
+  display: flex;
+  height: 68px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Icon div {
+  display: flex;
+  color: #cacaca;
+  font-size: 30px;
+}
