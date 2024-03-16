@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { BottomBar } from "../component/Bottombar";
 import { TodoCard } from "../component/TodoCard";
 
+import "../css/SearchPage.css";
+
 const recentSearchData = [];
 
 const sortOptionList = [

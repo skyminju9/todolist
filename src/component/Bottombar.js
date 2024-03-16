@@ -2,6 +2,7 @@ import { ReactComponent as SearchIcon } from "../assets/search.svg";
 import { ReactComponent as HomeIcon } from "../assets/home.svg";
 import { ReactComponent as NoteAltIcon } from "../assets/note_alt.svg";
 import { ReactComponent as ForYouIcon } from "../assets/for_you.svg";
+import "../css/Bottombar.css";
 
 export const BottomBar = () => {
   return (
