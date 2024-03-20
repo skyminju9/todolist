@@ -1,0 +1,14 @@
+body {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0px;
+  font-family: "Inter", sans-serif;
+}
+
+.App {
+  width: 393px;
+  height: 852px;
+  background-color: #fff;
+}

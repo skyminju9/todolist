@@ -2,13 +2,9 @@
 import React from "react";
 import SvgIcon from "@mui/material/SvgIcon";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
-<<<<<<< Updated upstream
-import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
-
-const Todo = () => {
-=======
 import { useNavigate } from "react-router-dom";
 import TodoCard from "./TodoCard";
+import "../css/Todo.css";
 
 const Todo = () => {
   const navigate = useNavigate();
@@ -18,7 +14,6 @@ const Todo = () => {
     console.log("hi");
   };
 
->>>>>>> Stashed changes
   return (
     <div>
       {/* 할 일 목록 부분입니다. 할 일 제목과 할 일 카드를 포함합니다. */}
@@ -27,11 +22,7 @@ const Todo = () => {
           <h3 className="todo_head_title">할 일</h3>
           <h4 className="todo_head_sub">오늘 마감 1개</h4>
           {/* 할 일 추가 버튼을 표시합니다. */}
-<<<<<<< Updated upstream
-          <section className="todo_head_icon">
-=======
           <div className="todo_head_icon" onClick={handleEditClick}>
->>>>>>> Stashed changes
             <SvgIcon component={BorderColorIcon} inheritViewBox />
           </div>
         </div>

@@ -1,0 +1,77 @@
+.TodoCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  border-radius: 16px;
+  width: 308px;
+  height: 72px;
+  margin-bottom: 24px;
+}
+
+.TodoCard .todo-top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+}
+
+.TodoCard .todo-top-left {
+  display: flex;
+  padding-left: 24px;
+}
+
+.TodoCard .todo-title {
+  font-size: 14px;
+}
+
+.TodoCard .todo-rating {
+  margin-left: 8px;
+}
+
+.TodoCard .todo-top-right {
+  display: flex;
+}
+
+
+.TodoCard .todo-date {
+  font-size: 10px;
+  color: #808080;
+  margin-right: 8px;
+}
+
+
+.TodoCard .todo-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.TodoCard .todo-content {
+  font-size: 12px;
+  width: 217px;
+  margin-left: 24px;
+  color: #808080;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.TodoCard .todo-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  width: 37px;
+  height: 18px;
+  text-align: center;
+  top: 11px;
+  background-color: #d9d9d9;
+  color: #808080;
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+  margin-right: 12px;
+}
+
+.TodoCard .todo-tag .todo-tag-text {
+  margin-left: 4px;
+}
