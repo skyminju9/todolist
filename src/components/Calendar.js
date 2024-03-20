@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import CircleIcon from "@mui/icons-material/Circle";
+import "../css/Calendar.css";
 
 // 날짜가 오늘인지 확인하는 함수입니다. 입력된 날짜와 현재 날짜가 같은지 비교합니다.
 const isToday = (date) => {

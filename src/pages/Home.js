@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <Head />
       <Calendar />
-      <Todo />
+      {/* <Todo /> */}
       <Icon />
     </div>
   );
