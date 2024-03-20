@@ -4,8 +4,6 @@ import NoteAltOutlinedIcon from "@mui/icons-material/NoteAltOutlined";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 
 const Icon = () => {
-<<<<<<< Updated upstream
-=======
   const navigate = useNavigate();
 
   const handleHomeClick = () => {
@@ -20,7 +18,6 @@ const Icon = () => {
     navigate("/Setting");
   };
 
->>>>>>> Stashed changes
   return (
     <div>
       <div className="Icon">
