@@ -1,0 +1,139 @@
+@import url("https://rsms.me/inter/inter.css");
+
+header {
+  width: 393px;
+}
+h4 {
+  text-align: left;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.New {
+  border: 1px solid #222222;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto; /* 가로 중앙 정렬 */
+  width: 393px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+section {
+  margin: 10px;
+  position: relative;
+  padding: 10px;
+  display: grid;
+  justify-content: space-between;
+}
+section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 350px; /* border-bottom의 길이 */
+  height: 1px; /* border-bottom의 두께 */
+  background: #b0b0b0; /* border-bottom의 색상 */
+  opacity: 0.5;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0; /* 상하 패딩만 적용하고 좌우 패딩은 제거 */
+  width: 100%; /* 컨테이너의 너비를 100%로 설정 */
+}
+
+.Header button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+  margin: 0; /* 버튼의 마진 제거 */
+}
+
+.Header button:hover {
+  background-color: #f0f0f0;
+}
+
+.Date input {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+}
+.Title input {
+  width: 321px;
+}
+.Rating {
+  display: flex;
+}
+.Rating div {
+  display: contents;
+}
+.Category {
+  display: flex;
+}
+.Tag input {
+  width: 200px;
+}
+.Selection {
+  margin-left: 10px;
+  /* 교차되는 대각선 패턴 */
+
+  background-size: cover;
+}
+.Memo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.memo {
+  width: 80%;
+  height: 116px;
+}
+.list-container {
+  display: flex; /* Flexbox 사용 */
+  flex-direction: row; /* 항목을 가로로 나열 */
+  flex-wrap: wrap; /* 필요한 경우 줄 바꿈 */
+  list-style-type: none; /* 기본 리스트 스타일 제거 */
+  padding: 0; /* 기본 패딩 제거 */
+  margin: 0; /* 기본 마진 제거 */
+  align-items: center; /* 세로 방향 중앙 정렬 */
+}
+.list-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.list-item-icon {
+  font-size: 2rem; /* 아이콘 크기 조정 */
+}
+
+.list-item-text {
+  position: absolute;
+  color: black; /* 텍스트 색상 */
+  font-size: 0.75rem; /* 텍스트 크기 */
+  pointer-events: none; /* 텍스트 클릭 방지 */
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
+  transform: rotate(180deg); /* 아이콘을 180도 회전 */
+}
+
+.react-datepicker__day--selected {
+  border-radius: 50%;
+  background-color: #216ba5;
+  color: white;
+}
