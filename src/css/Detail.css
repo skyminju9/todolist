@@ -52,7 +52,13 @@ body {
     justify-content:right ;
     background-color: white; 
 }
-
+.header_date{
+    background-color: white;
+}
+.dropdownMenu{
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
 /* button */
 
 .close{

@@ -77,7 +77,7 @@ const Detail = ({id}) => {
                     <div className='closeWrapper' >
                         <button className='close' onClick={navigate(-1)}>닫기</button>
                     </div>
-                    <div className='header_date' style={{backgroundColor:'white'}}>
+                    <div className='header_date' >
                         <div className='todo_date'>
                         {`${todoMonth()}월 
                         ${todoDate()}일
@@ -100,7 +100,7 @@ const Detail = ({id}) => {
                     <div> {targetTodo.tag} </div>
                     <ShowStar number={targetTodo.star}/>
                 </div>
-                <div style={{marginBottom:8, marginTop:8}}>{targetTodo.dropdownMenu}</div>
+                <div className='dropdownMenu' >{targetTodo.dropdownMenu}</div>
                 <div>{targetTodo.time}</div>
             </section>
             <section className="memo-wrapper">
