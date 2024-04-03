@@ -9,6 +9,7 @@ import MainPage from './pages/MainPage';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import Setting from './pages/Search';
+import Detail from './pages/Detail';
 
 import { Routes, Route } from "react-router-dom";
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/Search" element={<Search />} />
         <Route path="/Edit" element={<Edit />} />
         <Route path="/Setting" element={<Setting />} />
+        <Route path="/Detail" element={<Detail id={2}/>}/>
       </Routes>
     </div>
   );

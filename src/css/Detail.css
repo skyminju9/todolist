@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+@media (min-width: 400px) {
+  .App {
+    width: 390px;
+    height: 860px;
+  }
+}
+
+@media (max-width: 400px) {
+  .App {
+    width: 90vh;
+    height: auto;
+  }
+}
+
+#root {
+  background-color: white;
+  box-shadow: rgba(100, 100, 11, 0.2) 0px 7px 29px 0px;
+}
+
+.TodoDetail {
+  padding: 30px;
+}
+
+.todo_date_wrapper{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e2e2e2;
+  
+}
+
+.todo_year{
+  font-size: 18px;
+}
+
+
+.closeWrapper{
+    display: flex;
+    justify-content:right ;
+    background-color: white; 
+}
+
+/* button */
+
+.close{
+  display: flex;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  
+  
+}
+.TodoDetail .detail_button{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between; 
+}
+
+.btn_edit{
+  border: none;
+  color: blue;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.btn_delete{
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.memo-title{
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e2e2e2;
+}
+
+.memo-wrapper .detail-memo{
+  padding-top: 20px;
+  font-size: 18px;
+}
+.TodoDetail .todo .summary{
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.todo{
+  padding-bottom: 20px;
+}
+
+/* ShowStar*/
+
+.fa-star {
+  padding: 0.2em; 
+  color: gray;
+}
+
+.BottomBar {
+  bottom: 0;
+  height: 68px;
+  padding: 14px 39px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #CACACA;
+}
