@@ -2,7 +2,6 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import NoteAltOutlinedIcon from "@mui/icons-material/NoteAltOutlined";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import { useNavigate } from "react-router-dom";
 import "../css/Icon.css";
 import { Link } from "react-router-dom";
 
