@@ -7,25 +7,11 @@ import "../css/Icon.css";
 import { Link } from "react-router-dom";
 
 const Icon = () => {
-  const navigate = useNavigate();
-
-  const handleHomeClick = () => {
-    navigate("/");
-  };
-
-  const handleSearchClick = () => {
-    navigate("/Search");
-  };
-
-  const handleSettingClick = () => {
-    navigate("/Setting");
-  };
-
   return (
     <div>
       <div className="Icon">
-        <div className="home" onClick={handleHomeClick}>
-          <Link to="/">
+        <div className="home">
+          <Link to="/home">
             <HomeOutlinedIcon fontSize="" />
           </Link>
         </div>

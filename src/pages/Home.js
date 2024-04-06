@@ -1,12 +1,12 @@
-import Calendar from "../components/Calendar";
+import Calendar from "../components/Home/Calendar";
 import Head from "../components/Head";
-import Todo from "../components/Todo";
+import Todo from "../components/Home/Todo";
 import Icon from "../components/Icon";
 
 const Home = () => {
   return (
     <div>
-      <Head />
+      <Head text={"To Do"} />
       <Calendar />
       {/* <Todo /> */}
       <Icon />

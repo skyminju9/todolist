@@ -1,5 +1,5 @@
 import { Rating } from "@mui/material";
-import "../css/TodoCard.css";
+import "../../css/TodoCard.css";
 
 export const TodoCard = ({ todoData }) => {
   const dateChange = (date) => {

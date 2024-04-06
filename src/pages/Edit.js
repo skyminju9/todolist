@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { RatingStars } from "../component/RatingStars";
-import TagInput from "../component/TagInput";
+import { RatingStars } from "../components/Edit/RatingStars";
+import TagInput from "../components/Edit/TagInput";
 import "../css/Edit.css";
+import { useNavigate } from "react-router-dom";
 
 const Edit = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -11,6 +12,8 @@ const Edit = () => {
   const [rating, setRating] = useState(0);
   const [tags, setTags] = useState([]);
   const [submittedData, setSubmittedData] = useState(null); // 제출된 데이터를 저장할 상태
+
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -26,7 +29,7 @@ const Edit = () => {
 
     console.log(data);
 
-    // 제출된 데이터를 상태에 저장
+    // 제출된 데이터를 상태에 저장, "여기서 로컬로 저장"
     setSubmittedData(data);
 
     // 필드 초기화
@@ -38,9 +41,11 @@ const Edit = () => {
     setMemo("");
     console.log(submittedData);
   };
+
   const handleCancel = () => {
-    // 취소 로직, 필요에 따라 구현
+    navigate(-1);
   };
+
   return (
     <div className="Edit">
       <div className="Header">

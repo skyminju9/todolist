@@ -3,7 +3,7 @@ import "../css/Icon.css";
 
 import { ReactComponent as SearchIcon } from "../assets/search.svg";
 import { useEffect, useState } from "react";
-import { TodoCard } from "../component/TodoCard";
+import { TodoCard } from "../components/Search/TodoCard";
 
 import "../css/SearchPage.css";
 
@@ -126,12 +126,14 @@ const Search = () => {
 
   //최근 검색 결과 핸들러
   const recentSearchHandler = (data) => {
-    const localsearchData = [data, ...recentSearchData].slice(0, 5);
-    setRecentSearchData(localsearchData);
-    window.localStorage.setItem(
-      "recentsearchdata",
-      JSON.stringify(localsearchData)
-    );
+    if (!recentSearchData.includes(data)) {
+      const localsearchData = [data, ...recentSearchData].slice(0, 5);
+      setRecentSearchData(localsearchData);
+      window.localStorage.setItem(
+        "recentsearchdata",
+        JSON.stringify(localsearchData)
+      );
+    }
   };
 
   return (

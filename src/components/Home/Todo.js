@@ -4,7 +4,7 @@ import SvgIcon from "@mui/material/SvgIcon";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
 import { useNavigate } from "react-router-dom";
 import TodoCard from "./TodoCard";
-import "../css/Todo.css";
+import "../../css/Todo.css";
 
 const Todo = () => {
   const navigate = useNavigate();
